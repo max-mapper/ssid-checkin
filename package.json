@@ -1,6 +1,6 @@
 {
   "name": "ssid-checkin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "check in to foursquare automatically based on your wifi ssid (Mac OSX only)",
   "main": "index.js",
   "bin": {
@@ -9,7 +9,8 @@
   "author": "max ogden",
   "license": "BSD",
   "dependencies": {
-    "request": "^2.34.0"
+    "request": "^2.34.0",
+    "hasinternet": "0.0.1"
   },
   "devDependencies": {},
   "scripts": {
