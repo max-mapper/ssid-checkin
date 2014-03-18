@@ -1,8 +1,10 @@
+#!/usr/bin/env node
+
 var request = require('request')
 var cmd = require('child_process')
 var fs = require('fs')
 
-var token = process.env['FSQTOKEN']
+var token = process.argv[2] || process.env['FSQTOKEN']
 var lastSsid = ""
 
 checkin()
@@ -10,7 +12,9 @@ checkin()
 var checkinPeriod = 1000 * 60 * 60 * 12 // 12 hours
 
 function wait() {
-  setTimeout(checkin, 1000 * 60 * 5) // check every 5 minutes
+  var timeout = 1000 * 60 * 5
+  console.log('Checking again in', timeout / 60 / 1000, 'minutes')
+  setTimeout(checkin, timeout) // check every 5 minutes
 }
 
 function checkin() {

@@ -1,14 +1,26 @@
 {
   "name": "ssid-checkin",
-  "version": "0.0.0",
-  "description": "",
+  "version": "1.0.0",
+  "description": "check in to foursquare automatically based on your wifi ssid (Mac OSX only)",
   "main": "index.js",
+  "bin": {
+    "ssid-checkin": "index.js"
+  },
+  "author": "max ogden",
+  "license": "BSD",
+  "dependencies": {
+    "request": "^2.34.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "request": "^2.34.0"
-  }
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maxogden/ssid-checkin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maxogden/ssid-checkin/issues"
+  },
+  "homepage": "https://github.com/maxogden/ssid-checkin"
 }
