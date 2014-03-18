@@ -1,0 +1,258 @@
+{
+  "meta": {
+    "code": 200
+  },
+  "notifications": [
+    {
+      "type": "notificationTray",
+      "item": {
+        "unreadCount": 34
+      }
+    }
+  ],
+  "response": {
+    "checkin": {
+      "id": "532896fa11d249e497d4ea0c",
+      "createdAt": 1395169018,
+      "type": "checkin",
+      "timeZoneOffset": -420,
+      "user": {
+        "id": "390134",
+        "firstName": "Max",
+        "lastName": "Ogden",
+        "gender": "male",
+        "relationship": "self",
+        "photo": {
+          "prefix": "https://irs2.4sqi.net/img/user/",
+          "suffix": "/UCESFDEXL1WVWKHF.png"
+        }
+      },
+      "venue": {
+        "id": "51a1a818498e8fe19886b480",
+        "name": "Cafe 3016",
+        "contact": {},
+        "location": {
+          "address": "3016 MacArthur Boulevard",
+          "crossStreet": "Maple Ave",
+          "lat": 37.797315,
+          "lng": -122.204571,
+          "postalCode": "94602",
+          "cc": "US",
+          "city": "Oakland",
+          "state": "CA",
+          "country": "United States"
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d16d941735",
+            "name": "CafÔøΩ",
+            "pluralName": "CafÔøΩs",
+            "shortName": "CafÔøΩ",
+            "icon": {
+              "prefix": "https://ss1.4sqi.net/img/categories_v2/food/cafe_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "verified": false,
+        "stats": {
+          "checkinsCount": 2,
+          "usersCount": 2,
+          "tipCount": 0
+        },
+        "specials": {
+          "count": 0
+        },
+        "reasons": {
+          "count": 1,
+          "items": [
+            {
+              "summary": "You're here! +7 points",
+              "type": "general",
+              "reasonName": "hereNowReason",
+              "target": {
+                "type": "navigation",
+                "object": {
+                  "id": "53289804498e3ff11d1e3f94",
+                  "type": "checkinDetail",
+                  "target": {
+                    "type": "path",
+                    "url": "/checkins/532896fa11d249e497d4ea0c"
+                  },
+                  "ignorable": false
+                }
+              }
+            }
+          ]
+        }
+      },
+      "photos": {
+        "count": 0,
+        "items": []
+      },
+      "posts": {
+        "count": 0,
+        "textCount": 0
+      },
+      "replies": {
+        "count": 0
+      },
+      "likes": {
+        "count": 0,
+        "groups": []
+      },
+      "like": false,
+      "comments": {
+        "count": 0,
+        "items": []
+      },
+      "score": {
+        "total": 7,
+        "scores": [
+          {
+            "icon": "https://foursquare.com/img/points/discovery-venue3.png",
+            "message": "Your first check-in at Cafe 3016!",
+            "points": 5
+          },
+          {
+            "icon": "https://foursquare.com/img/points/discovery-venue3.png",
+            "message": "First of your friends to check in here.",
+            "points": 2
+          }
+        ]
+      }
+    },
+    "notifications": [
+      {
+        "type": "message",
+        "item": {
+          "message": "You've been here 2 times!",
+          "entities": [
+            {
+              "indices": [
+                17,
+                18
+              ],
+              "type": "count",
+              "value": 2
+            }
+          ]
+        },
+        "alert": false
+      },
+      {
+        "type": "mayorship",
+        "item": {
+          "type": "none",
+          "daysBehind": 1,
+          "message": "You are 1 day away from becoming mayor!",
+          "image": "https://foursquare.com/img/crown.png"
+        },
+        "alert": false
+      },
+      {
+        "type": "insights",
+        "item": {
+          "insights": {
+            "count": 1,
+            "items": [
+              {
+                "type": "pointsReward",
+                "image": "https://foursquare.com/img/points/discovery-venue3.png",
+                "title": "Your first check-in at Cafe 3016!",
+                "shareable": false,
+                "points": {
+                  "image": {
+                    "prefix": "https://foursquare.com/img/points/discovery-venue3_",
+                    "sizes": [
+                      44,
+                      60,
+                      120
+                    ],
+                    "name": ".png"
+                  },
+                  "message": "Your first check-in at Cafe 3016!",
+                  "points": 5
+                }
+              }
+            ]
+          }
+        },
+        "alert": true
+      },
+      {
+        "type": "leaderboard",
+        "item": {
+          "leaderboard": [
+            {
+              "user": {
+                "id": "247297",
+                "firstName": "Peter",
+                "lastName": "Krantz",
+                "gender": "male",
+                "relationship": "friend",
+                "photo": {
+                  "prefix": "https://irs3.4sqi.net/img/user/",
+                  "suffix": "/AJLDSEWEZUQ4OQDW.jpg"
+                }
+              },
+              "scores": {
+                "recent": 46,
+                "max": 204,
+                "checkinsCount": 7
+              },
+              "rank": 32
+            },
+            {
+              "user": {
+                "id": "390134",
+                "firstName": "Max",
+                "lastName": "Ogden",
+                "gender": "male",
+                "relationship": "self",
+                "photo": {
+                  "prefix": "https://irs2.4sqi.net/img/user/",
+                  "suffix": "/UCESFDEXL1WVWKHF.png"
+                }
+              },
+              "scores": {
+                "recent": 45,
+                "max": 147,
+                "checkinsCount": 8
+              },
+              "rank": 33
+            },
+            {
+              "user": {
+                "id": "34459",
+                "firstName": "Lucas",
+                "lastName": "Hrabovsky",
+                "gender": "male",
+                "relationship": "friend",
+                "photo": {
+                  "prefix": "https://irs2.4sqi.net/img/user/",
+                  "suffix": "/34459_1255215781688.png"
+                }
+              },
+              "scores": {
+                "recent": 43,
+                "max": 174,
+                "checkinsCount": 4
+              },
+              "rank": 34
+            }
+          ],
+          "message": "Nice! You pulled ahead of Lucas!"
+        },
+        "alert": false
+      }
+    ],
+    "notificationsOrder": [
+      "special",
+      "score",
+      "leaderboard",
+      "replies"
+    ]
+  }
+}
