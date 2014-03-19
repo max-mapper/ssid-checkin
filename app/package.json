@@ -12,6 +12,9 @@
     "grunt": "~0.4.1",
     "grunt-node-webkit-builder": "latest"
   },
+  "window": {
+    "frame": false
+  },
   "scripts": {
     "start": "nodewebkit",
     "build": "grunt"

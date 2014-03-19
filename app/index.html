@@ -3,13 +3,53 @@
   <head>
     <title>Hello World!</title>
   </head>
+  <style>
+    body {
+      -webkit-app-region: drag;
+      background-color: #151515;
+      color: #d0d0d0;
+      font-size: 14px;
+      line-height: 20px;
+      margin: 0;
+      padding: 20px;
+    }
+    pre {
+      margin: 0;
+      padding: 5px 0;
+      -webkit-user-select: none;
+      -webkit-app-region: drag;
+    }
+    .normal-wrap { white-space: normal; }
+    pre.log {
+      color: #b0b0b0;
+      padding: 0;
+    }
+    pre.info {
+      color: #6a9fb5;
+    }
+    pre.warn {
+      color: #d28445;
+    }
+    pre.error {
+      color: #ac4142;
+    }
+  </style>
   <body>
+<div><pre style="float:left;margin-top:15px;margin-bottom:15px;">   __________ ________     ________  ________________ __ _____   __
+  / ___/ ___//  _/ __ \   / ____/ / / / ____/ ____/ //_//  _/ | / /
+  \__ \\__ \ / // / / /  / /   / /_/ / __/ / /   / ,&lt;   / //  |/ / 
+ ___/ /__/ // // /_/ /  / /___/ __  / /___/ /___/ /| |_/ // /|  /  
+/____/____/___/_____/   \____/_/ /_/_____/\____/_/ |_/___/_/ |_/   
+
+</pre><div style="clear:both"></div></div>
     <script>
     console.log = function() {
       var args = Array.prototype.slice.call(arguments).join(' ')
-      var div = document.createElement('div')
+      var div = document.createElement('pre')
+      div.classList.add('normal-wrap')
       div.innerHTML = args
       document.body.appendChild(div)
+      document.body.scrollTop = document.body.scrollHeight // scrolls to bottom
     }
     require('ssid-checkin')
     </script>.
