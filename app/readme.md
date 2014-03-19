@@ -9,6 +9,8 @@ npm run build
 
 then look in `build/releases/SSIDCheckin/mac` for your app
 
-make sure you set your ENV `FSQTOKEN` variable and then run the app.
+currently you have to set your token manually.
 
-to edit venues right click on the app in finder and 'Show Package Contents', then edit `Contents/Resources/app.nw/venues.json`
+right click on the app in finder and 'Show Package Contents', then edit `Contents/Resources/app.nw/token.txt`
+
+to edit venues: `Contents/Resources/app.nw/venues.json`
