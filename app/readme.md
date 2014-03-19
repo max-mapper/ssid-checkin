@@ -14,3 +14,9 @@ currently you have to set your token manually.
 right click on the app in finder and 'Show Package Contents', then edit `Contents/Resources/app.nw/token.txt`
 
 to edit venues: `Contents/Resources/app.nw/venues.json`
+
+## screenshot of app running
+
+(it's using the `frameless` setting of node-webkit)
+
+![](screenshot.png)
