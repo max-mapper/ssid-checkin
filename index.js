@@ -5,8 +5,11 @@ var cmd = require('child_process')
 var fs = require('fs')
 var hasInternet = require('hasinternet')
 
-var token = process.argv[2] || process.env['FSQTOKEN']
+var token = process.argv[2] || process.env['FSQTOKEN'] || fs.readFileSync('token.txt')
 var lastSsid = ""
+
+console.log('Using token', token)
+console.log('Using venues', fs.readFileSync('venues.json').toString())
 
 checkin()
 
@@ -39,12 +42,12 @@ function checkin() {
     
       var fsqid = ssids[ssid]
       if (!fsqid) {
-        wait()
-        return console.log(ssid, 'not in whitelist')
+        console.log('not in whitelist', ssid)
+        return wait()
       }
       if (lastSsid === ssid) {
-        wait()
-        return console.log('Already checked in to', ssid)
+        console.log('Already checked in to', ssid)
+        return wait()
       }
     
       lastSsid = ssid
@@ -55,7 +58,7 @@ function checkin() {
         var myCheckins = "https://api.foursquare.com/v2/users/self/checkins?oauth_token=" + token + "&v=" + dateStamp()
         request(myCheckins, function(err, resp, body) {
           if (err || resp.statusCode > 299) {
-            console.log(err || body)
+            console.log('Error' + (err || body))
             return wait()
           }
           var lastCheckin = JSON.parse(body).response.checkins.items[0]
@@ -77,7 +80,7 @@ function checkin() {
         console.log("Checking in at", ssid, checkinUrl)
         request.post(checkinUrl, function(err, resp, body) {
           if (err || resp.statusCode > 299) {
-            console.log(err || body)
+            console.log('Error' + (err || body))
           } else {
             console.log('Checked in at', JSON.parse(body).response.checkin.venue.name)
           } 
