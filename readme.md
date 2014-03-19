@@ -1,6 +1,8 @@
 # ssid-checkin
 
-experimental
+auto check-in to foursquare when you join known wifi networks
+
+![](screenshot.png)
 
 inspired by https://github.com/wijnanb/SSID-FourSquare-Checkin
 
