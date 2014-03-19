@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <script>
+    console.log = function() {
+      var args = Array.prototype.slice.call(arguments).join(' ')
+      var div = document.createElement('div')
+      div.innerHTML = args
+      document.body.appendChild(div)
+    }
+    require('ssid-checkin')
+    </script>.
+  </body>
+</html>

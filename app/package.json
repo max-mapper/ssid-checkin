@@ -1,0 +1,19 @@
+{
+  "name": "ssid-checkin-app",
+  "version": "1.0.1",
+  "description": "check in to foursquare automatically based on your wifi ssid (Mac OSX only)",
+  "main": "index.html",
+  "dependencies": {
+    "nodewebkit": "^0.8.5-1",
+    "ssid-checkin": "*"
+  },
+  "devDependencies": {
+    "grunt-cli": "~0.1.13",
+    "grunt": "~0.4.1",
+    "grunt-node-webkit-builder": "latest"
+  },
+  "scripts": {
+    "start": "nodewebkit",
+    "build": "grunt"
+  }
+}

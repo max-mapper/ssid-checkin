@@ -34,7 +34,7 @@ function checkin() {
     cmd.exec(airport, done)
   
     function done(err, stdo, stde) {
-      if (err) return console.error(err)
+      if (err) return console.log(err)
       var ssid = stdo.trim()
     
       var fsqid = ssids[ssid]
@@ -55,7 +55,7 @@ function checkin() {
         var myCheckins = "https://api.foursquare.com/v2/users/self/checkins?oauth_token=" + token + "&v=" + dateStamp()
         request(myCheckins, function(err, resp, body) {
           if (err || resp.statusCode > 299) {
-            console.error(err || body)
+            console.log(err || body)
             return wait()
           }
           var lastCheckin = JSON.parse(body).response.checkins.items[0]
@@ -63,7 +63,7 @@ function checkin() {
             if (~~(Date.now()/1000) - (+lastCheckin.createdAt) > checkinPeriod) {
               doCheckin()
             } else {
-              console.error('Already checked in recently to', ssid)
+              console.log('Already checked in recently to', ssid)
               return wait()
             }
           } else {
@@ -77,7 +77,7 @@ function checkin() {
         console.log("Checking in at", ssid, checkinUrl)
         request.post(checkinUrl, function(err, resp, body) {
           if (err || resp.statusCode > 299) {
-            console.error(err || body)
+            console.log(err || body)
           } else {
             console.log('Checked in at', JSON.parse(body).response.checkin.venue.name)
           } 
