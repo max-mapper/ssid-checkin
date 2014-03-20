@@ -1,0 +1,11 @@
+{
+  "name": "ssid-checkin-app",
+  "version": "1.0.0",
+  "dependencies": {
+    "ssid-checkin": "latest"
+  },
+  "main": "index.html",
+  "window": {
+    "frame": false
+  }
+}
