@@ -2,9 +2,12 @@
 
 to build a mac app:
 
+clone this repo then:
+
 ```
-clone this repo
-cd ssid-checkin/app
+cd ssid-checkin/app/public
+npm install
+cd ..
 npm install
 npm run build
 ```
