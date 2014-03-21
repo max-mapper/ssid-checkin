@@ -61,6 +61,10 @@
       document.addEventListener('keyup', function(ev) {
         delete pressed[ev.keyCode]
       })
+      
+      window.addEventListener('blue', function() {
+        pressed = {}
+      })
     
       console.log = function() {
         var args = Array.prototype.slice.call(arguments).join(' ')
