@@ -2,7 +2,8 @@
   "name": "ssid-checkin-app",
   "version": "1.0.0",
   "dependencies": {
-    "ssid-checkin": "latest"
+    "ssid-checkin": "latest",
+    "remove-elements": "0.0.1"
   },
   "main": "index.html",
   "window": {

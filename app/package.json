@@ -11,7 +11,7 @@
     "grunt-node-webkit-builder": "latest"
   },
   "scripts": {
-    "start": "nodewebkit",
+    "start": "nodewebkit public",
     "build": "grunt"
   }
 }

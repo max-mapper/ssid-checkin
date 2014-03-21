@@ -42,16 +42,37 @@
 /____/____/___/_____/   \____/_/ /_/_____/\____/_/ |_/___/_/ |_/   
 
 </pre><div style="clear:both"></div></div>
-    <script>
-    console.log = function() {
-      var args = Array.prototype.slice.call(arguments).join(' ')
-      var div = document.createElement('pre')
-      div.classList.add('normal-wrap')
-      div.innerHTML = args
-      document.body.appendChild(div)
-      document.body.scrollTop = document.body.scrollHeight // scrolls to bottom
-    }
-    require('ssid-checkin')
+    <script type="text/javascript">
+      var remove = require('remove-elements')
+    
+      function clear() {
+        remove('.normal-wrap')
+      }
+    
+      var pressed = {}
+    
+      document.addEventListener('keydown', function(ev) {
+        pressed[ev.keyCode] = true
+        if (pressed[75] && pressed[91]) {
+          clear()
+        }
+      })
+    
+      document.addEventListener('keyup', function(ev) {
+        delete pressed[ev.keyCode]
+      })
+    
+      console.log = function() {
+        var args = Array.prototype.slice.call(arguments).join(' ')
+        var div = document.createElement('pre')
+        div.classList.add('normal-wrap')
+        div.innerHTML = args
+        document.body.appendChild(div)
+        document.body.scrollTop = document.body.scrollHeight // scrolls to bottom
+      }
+      
+      require('ssid-checkin')
     </script>.
   </body>
 </html>
+
