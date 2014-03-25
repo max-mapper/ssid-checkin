@@ -44,28 +44,37 @@
 </pre><div style="clear:both"></div></div>
     <script type="text/javascript">
       var remove = require('remove-elements')
-    
+      var gui = require('nw.gui')
+      
+      window.frame = gui.Window.get()
+      
       function clear() {
         remove('.normal-wrap')
       }
-    
+      
       var pressed = {}
-    
+      
       document.addEventListener('keydown', function(ev) {
         pressed[ev.keyCode] = true
         if (pressed[75] && pressed[91]) {
+          console.log(JSON.stringify(pressed))
           clear()
         }
       })
-    
+      
       document.addEventListener('keyup', function(ev) {
         delete pressed[ev.keyCode]
       })
       
-      window.addEventListener('blur', function() {
+      function clearPressed() {
         pressed = {}
-      })
-    
+      }
+      
+      window.frame.on('blur', clearPressed)
+      window.frame.on('focus', clearPressed)
+      window.addEventListener('blur', clearPressed)
+      window.addEventListener('focus', clearPressed)
+      
       console.log = function() {
         var args = Array.prototype.slice.call(arguments).join(' ')
         var div = document.createElement('pre')
