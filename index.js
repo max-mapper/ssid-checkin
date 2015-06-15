@@ -62,7 +62,7 @@ function checkin() {
             return wait()
           }
           var lastCheckin = JSON.parse(body).response.checkins.items[0]
-          if (lastCheckin.venue.id === fsqid) {
+          if (lastCheckin && lastCheckin.venue.id === fsqid) {
             if (~~(Date.now()/1000) - (+lastCheckin.createdAt) > checkinPeriod) {
               doCheckin()
             } else {
